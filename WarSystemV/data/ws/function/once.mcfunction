@@ -12,3 +12,4 @@ scoreboard objectives add timer dummy
 scoreboard players set t20 timer 0
 scoreboard objectives add health health
 
+scoreboard objectives add junktimer dummy
