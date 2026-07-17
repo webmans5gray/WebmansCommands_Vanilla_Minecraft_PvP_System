@@ -63,7 +63,9 @@ execute as @a if predicate ws:3 run loot give @s loot ws:potion1
 execute as @a if predicate ws:5 run loot give @s loot ws:healing
 execute as @a if predicate ws:5 run give @s ender_pearl
 
-execute as @a if predicate ws:5 run give @s snowball[custom_data={fireball:1},custom_name=[{"color":"red","italic":false,"text":"Fireball"},{"color":"white","text":" | "},{"color":"yellow","text":"Right click to cast"}],max_stack_size=1,item_model="fire_charge",enchantment_glint_override=true] 2
+execute as @a if predicate ws:5 run give @s snowball[custom_data={fireball:1},custom_name=[{"color":"red","italic":false,"text":"Fireball"},{"color":"white","text":" | "},{"color":"yellow","text":"Right click to cast"}],max_stack_size=1,item_model="fire_charge",enchantment_glint_override=true] 1
+
+
 execute as @a[team=Attacking] if predicate ws:10 run give @s snowball[custom_data={abardic:1},custom_name=[{"color":"red","italic":false,"text":"Bardic Inspiration"},{"color":"white","text":" | "},{"color":"yellow","text":"Right click to cast"}],max_stack_size=1,item_model="goat_horn",enchantment_glint_override=true,lore=["Gives all allies within 50 blocks resistance, speed, and regeneration"]] 1
 execute as @a[team=Defending] if predicate ws:10 run give @s snowball[custom_data={dbardic:1},custom_name=[{"color":"red","italic":false,"text":"Bardic Inspiration"},{"color":"white","text":" | "},{"color":"yellow","text":"Right click to cast"}],max_stack_size=1,item_model="goat_horn",enchantment_glint_override=true,lore=["Gives all allies within 50 blocks resistance, speed, and regeneration"]] 1
 
@@ -109,3 +111,10 @@ give @a white_banner[lore=["You coward"],enchantment_glint_override=true,custom_
 
 scoreboard players set @a Deaths 0
 gamerule send_command_feedback true
+
+
+
+#CAPTAIN
+tp @a[team=Defending] @a[sort=random,limit=1,team=Defending,tag=Captain]
+tp @a[team=Attacking] @a[sort=random,limit=1,team=Attacking,tag=Captain]
+

@@ -1,1 +1,1 @@
-damage @s 3 in_fire by @e[sort=nearest,tag=oil2,limit=1]
+damage @s 4 in_fire by @e[sort=nearest,tag=oil2,limit=1]

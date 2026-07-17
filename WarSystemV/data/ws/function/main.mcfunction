@@ -58,6 +58,8 @@ execute as @e[type=item,nbt={OnGround:1b,Item:{id:"minecraft:ladder",count:1,com
 execute as @e[type=item,nbt={OnGround:1b,Item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{barricade:1}}}}] at @s run function ws:battle/barricade
 
 #arachnide
-execute as @e[type=minecraft:snowball,nbt={Item:{components:{"minecraft:custom_data":{cobweb:1}}}}] at @s if score @s timer matches 4.. run function ws:battle/cobweb
-execute as @e[type=minecraft:snowball,nbt={Item:{components:{"minecraft:custom_data":{cobweb:1}}}}] at @s if score @s timer matches 18.. run function ws:battle/kill_cobweb
+execute as @e[type=minecraft:snowball,nbt={Item:{components:{"minecraft:custom_data":{cobweb:1}}}}] at @s if score @s timer matches 2.. run function ws:battle/cobweb
+execute as @e[type=minecraft:snowball,nbt={Item:{components:{"minecraft:custom_data":{cobweb:1}}}}] at @s if score @s timer matches 14.. run function ws:battle/killcobwebb
+
+
 
